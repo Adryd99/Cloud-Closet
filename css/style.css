@@ -929,6 +929,98 @@ textarea {
 /* =========================
    FAQ SECTION STYLES
    ========================= */
+/* --- STILI PER LA SEZIONE PROCESSO --- */
+
+#cc-process-intro-section {
+  background-color: #f8f9fa; /* Grigio molto tenue */
+  padding: 80px 20px;
+  font-family: inherit; /* Usa il font del tuo sito */
+}
+
+.cc-process-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.cc-process-header {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.cc-process-header h2 {
+  font-size: 2.5rem;
+  margin-bottom: 15px;
+  color: #1a1a1a;
+}
+
+.cc-process-header p {
+  font-size: 1.1rem;
+  color: #666;
+}
+
+/* GRIGLIA */
+.cc-process-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: center;
+}
+
+/* CARD SINGOLA */
+.cc-process-card {
+  background: #ffffff;
+  flex: 1 1 250px; /* Si adatta ma non scende sotto 250px */
+  max-width: 300px;
+  padding: 40px 25px;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.06);
+  text-align: center;
+  position: relative;
+  transition: transform 0.3s ease;
+}
+
+.cc-process-card:hover {
+  transform: translateY(-5px);
+}
+
+/* NUMERO IDENTIFICATIVO */
+.cc-process-number {
+  background-color: #000; /* Nero (o usa il tuo colore primario) */
+  color: #fff;
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  border-radius: 50%;
+  font-weight: bold;
+  font-size: 1.2rem;
+  margin: 0 auto 20px auto;
+}
+
+.cc-process-card h3 {
+  font-size: 1.25rem;
+  margin-bottom: 15px;
+  color: #333;
+}
+
+.cc-process-card p {
+  font-size: 0.95rem;
+  line-height: 1.5;
+  color: #555;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .cc-process-grid {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .cc-process-card {
+    max-width: 100%;
+    width: 100%;
+  }
+}
+
 .faq-grid {
   max-width: 800px;
   margin: 0 auto;

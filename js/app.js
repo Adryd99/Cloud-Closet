@@ -103,7 +103,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         // INVIO CON EMAILJS
         // Sostituisci 'YOUR_SERVICE_ID' e 'YOUR_TEMPLATE_ID' con i tuoi veri ID
-        emailjs.send('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', templateParams)
+        emailjs.send('service_qt34cge', 'template_krgxu27', templateParams)
           .then(() => {
             console.log('SUCCESS!');
             // Mostra successo

@@ -1021,57 +1021,49 @@ textarea {
   }
 }
 
-.faq-grid {
-  max-width: 800px;
-  margin: 0 auto;
-}
-
+/* Stile Contenitore */
 .faq-item {
-  border-bottom: 1px solid #eee;
-  margin-bottom: 10px;
+    border-bottom: 1px solid #eee;
+    margin-bottom: 10px;
 }
 
+/* Domanda (Cliccabile) */
 .faq-question {
-  padding: 20px 0;
-  font-size: 1.1rem;
-  font-weight: 600;
-  cursor: pointer;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  color: #333;
-  transition: color 0.3s ease;
+    padding: 20px;
+    background: #fff;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: bold;
+    user-select: none; /* Evita che si selezioni il testo cliccando veloce */
 }
 
 .faq-question:hover {
-  color: #007bff;
+    background-color: #f9f9f9;
 }
 
+/* Risposta (Nascosta di default) */
 .faq-answer {
-  max-height: 0;
-  overflow: hidden;
-  transition: max-height 0.3s ease-out; /* ease-out è più naturale per l'apertura */
-  color: #666;
-  line-height: 1.6;
+    max-height: 0;           /* Altezza zero = chiuso */
+    overflow: hidden;        /* Nasconde il contenuto che sborda */
+    transition: max-height 0.4s ease-out; /* Animazione fluida */
+    background-color: #fff;
 }
 
-.faq-answer p {
-  margin: 0;
-  padding-bottom: 20px;
+/* Padding interno */
+/* NON METTERE PADDING SU .faq-answer, altrimenti non si chiude del tutto! */
+.answer-content {
+    padding: 20px;
+    color: #666;
+    line-height: 1.6;
+    border-top: 1px solid #f1f1f1;
 }
 
-/* RIMUOVI QUESTO BLOCCO DAL CSS SE ESISTE */
-/*
-.faq-item.active .faq-answer {
-  max-height: 200px;
+/* Classe Active (gestita da JS per ruotare icona se c'è) */
+.faq-item.active .faq-question .icon {
+    transform: rotate(45deg); /* Esempio rotazione icona */
 }
-*/
-
-.faq-item.active .toggle-icon {
-  transform: rotate(45deg);
-  color: #007bff;
-}
-
 
 /* --- STILI PER TARGET AUDIENCE --- */
 

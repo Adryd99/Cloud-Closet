@@ -1,6 +1,10 @@
+import emailjs from '@emailjs/browser';
+
 console.log('Cloud Closet App Initialized');
 
-// (Assumendo che ci sia altro codice sopra, altrimenti questo blocco funzionerà comunque in modo autonomo)
+// Inizializza EmailJS con la tua Public Key (trovala nella dashboard di EmailJS sotto "Account" -> "Public Key")
+
+emailjs.init("INSERISCI_QUI_LA_TUA_PUBLIC_KEY");
 
 document.addEventListener('DOMContentLoaded', () => {
 

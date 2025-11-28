@@ -33,9 +33,11 @@ a {
 
 /* Navigation */
 .navbar {
-  background-color: transparent; /* Rimuove il colore di sfondo */
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
   box-shadow: none; /* Rimuove eventuali ombre che creerebbero una riga */
-  position: absolute; /* La sovrappone alla Hero image invece di spingerla giù */
   top: 0;
   left: 0;
   width: 100%;
@@ -86,7 +88,7 @@ a {
 }
 
 .btn-secondary {
-  color: #2563eb !important;       /* Testo blu scuro */
+  color: #357ABD !important;       /* Testo blu scuro */
   /* Assicuriamo che mantenga il padding e la forma */
   font-weight: 600;
   transition: all 0.2s ease;
@@ -1595,3 +1597,44 @@ textarea {
   }
 }
 
+
+/* --- MOBILE FLOATING BUTTON (FAB) --- */
+.mobile-fab {
+  display: none; /* Nascosto di default su desktop */
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 2000; /* Sopra a tutto (anche sopra footer e altri elementi) */
+
+  background-color: #2563eb; /* Blu brand */
+  color: white;
+  border: none;
+  border-radius: 50px; /* Forma a pillola o cerchio */
+  padding: 12px 20px;
+  box-shadow: 0 4px 15px rgba(37, 99, 235, 0.5);
+
+  font-weight: bold;
+  font-size: 1rem;
+  cursor: pointer;
+  align-items: center;
+  gap: 8px;
+  transition: transform 0.2s ease;
+}
+
+.mobile-fab:active {
+  transform: scale(0.95); /* Effetto click */
+}
+
+.mobile-fab span {
+  font-size: 1.2rem;
+}
+
+/* Mostra SOLO su schermi piccoli */
+@media (max-width: 768px) {
+  #hero-cta-btn{
+    display: none;
+  }
+  .mobile-fab {
+    display: flex; /* Diventa visibile flex */
+  }
+}
